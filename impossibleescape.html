@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kutuyu Hareket Ettirme</title>
+    <style>
+        body{
+            background-color: grey;
+        }
+        .kutu1 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position: relative;
+            text-align: center;
+        }
+        @keyframes hareketEt1 {
+            0% 
+            {
+                left: 0;
+                top: 0;
+            }
+            25% 
+            {
+                left: 500px;
+                top: 0px;
+                
+            }
+            50% 
+            {
+                left: 500px;
+                top: 500px;
+            }
+            75%
+            {
+                left: 0px;
+                top: 500px;
+            }
+            100%
+            {
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        .kutu1 {
+            animation: hareketEt1 500ms infinite;
+        }
+        .kutu2 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative; 
+            text-align: center;
+        }
+        @keyframes hareketEt2 {
+            0% 
+            {
+                left: 0px;
+                top: 0px;
+            }
+            25% 
+            {
+                left: 0px;
+                top: 290px;
+                
+            }
+            50% 
+            {
+                left: 290px;
+                top: 290px;
+            }
+            75%
+            {
+                left: 290px;
+                top: 0px;
+            }
+            100%
+            {
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        .kutu2 {
+            animation: hareketEt2 500ms infinite; 
+        }
+        #kucukkutualan{
+            border-style: none;
+            height: 390px;
+            width: 390px;
+            border-color: aliceblue;
+           
+            top: 100px;
+            left: 120px;
+            position: fixed;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="kutu1">NO!!!</div>
+    <div id="kucukkutualan">
+<div class="kutu2">GET OUT OF MY WAY!</div>
+    </div>
+</body>
+</html>
