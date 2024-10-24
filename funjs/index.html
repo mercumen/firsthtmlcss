@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #kedi{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            transition: top 0.3s ease, left 0.3s ease;
+            }
+        
+    </style>
+</head>
+<body>
+    <div id="kedi"><img id="kediresim" src="kedi1.png" style="width: 100px; height: 200px;" ></div>
+    
+    <script>
+        let kedi_sayar=0;
+        
+        const kedi =document.getElementById('kedi');
+        
+        kedi.addEventListener('mouseover', () => {
+        
+        const randomX = Math.random() * (window.innerWidth - kedi.offsetWidth);
+        const randomY = Math.random() * (window.innerHeight - kedi.offsetHeight);
+        kedi.style.left = `${randomX}px`;
+        kedi.style.top = `${randomY}px`;
+        
+        kedi_sayar++;
+         
+        console.log(kedi_sayar);
+        
+        if( kedi_sayar > 10){
+            let kediresim = document.getElementById('kediresim');
+            kediresim.src = "kedi3.png";
+        }
+        if( kedi_sayar > 20){
+            let kediresim = document.getElementById('kediresim');
+            kediresim.src = "kedi2.jpg";
+        }
+    });
+    
+   
+    </script>
+</body>
+</html>
